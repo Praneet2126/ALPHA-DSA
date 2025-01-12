@@ -1,4 +1,6 @@
 package Arrays;
+// import java.util.Arrays;
+// import java.util.Collections;
 
 public class BasicSorting {
     public static void printArr(int[] arr) {
@@ -51,11 +53,38 @@ public class BasicSorting {
         }
     }
 
+    public static void countingSort(int arr[]) {
+        // getting the largest element to define count array size
+        int largest = Integer.MIN_VALUE;
+        for(int i=0; i<arr.length; i++) {
+            largest = Math.max(largest, arr[i]); 
+        }
+
+        //count array
+        int count[] = new int[largest+1];
+        for(int i=0; i<arr.length; i++) {
+            count[arr[i]]++; 
+        }
+
+        //sorting
+        int j = 0;
+        for(int i=0; i<count.length; i++){
+            while(count[i] > 0) {
+                arr[j] = i;
+                j++;
+                count[i]--; 
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int[] nums = {5,4,3,2,1};
+        int nums[] = {4,3,1,5,2};
         // bubbleSort(nums);
         // selectionSort(nums);
-        insertionSort(nums);
-        printArr(nums);        
+        // insertionSort(nums);
+        // Arrays.sort(nums,0,3);  
+        // Arrays.sort(nums, Collections.reverseOrder());  
+        countingSort(nums);
+        printArr(nums);      
     }    
 }
