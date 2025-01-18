@@ -41,6 +41,7 @@ public class Strings {
         return largest;
     }
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         char strArray[] = {'a','b','c','d'};    // needs to be explicitly sent as an array.
         String s1 = "Tony Stark";

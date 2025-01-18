@@ -25,10 +25,10 @@ public class Questions {
     
     public static void main(String[] args) {
         String str = "abcEdaio";
-        // System.out.println(lowerVowelCount(str));
+        System.out.println(lowerVowelCount(str));
 
         String str2 = "ApnlaCollegel".replace("l","");
-        // System.out.println(str2);
+        System.out.println(str2);
 
 
         //NOTE: .intern():-
