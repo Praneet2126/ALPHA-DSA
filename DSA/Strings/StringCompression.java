@@ -21,6 +21,12 @@ public class StringCompression {
     
     public static void main(String[] args) {
         String str = "aaabbcccdd";
-        System.out.println(compress(str));
+        // System.out.println(compress(str));
+        String str2 = compress(str);
+        System.out.println(str2);
+        char[] temp = str.toCharArray();
+        for(char ch : temp) {
+            System.out.print(ch + " ");
+        }
     }
 }
