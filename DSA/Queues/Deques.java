@@ -8,7 +8,5 @@ public class Deques {
         deque.addFirst(1);  
         deque.addFirst(2);
         System.out.println(deque);  
-        deque.removeFirst();
-        System.out.println(deque);
     }
 }
