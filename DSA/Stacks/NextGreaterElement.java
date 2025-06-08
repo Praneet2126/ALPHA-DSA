@@ -22,7 +22,7 @@ public class NextGreaterElement {
             }
 
             // Step 3
-            s.push(i);
+            s.push(i);      // index push
         }
 
         for(int i=0 ;i<nextGreater.length; i++) {
