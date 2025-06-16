@@ -3,7 +3,7 @@ package Graphs;
 import java.util.*;
 
 public class TopologicalSort {
-        static class Edge {
+    static class Edge {
         int src;
         int dest;
 
