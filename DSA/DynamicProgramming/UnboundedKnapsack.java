@@ -1,6 +1,15 @@
 package DynamicProgramming;
 
 public class UnboundedKnapsack {
+    public static void print(int dp[][]) {
+        for(int i=0; i<dp.length; i++) {
+            for(int j=0; j<dp[0].length; j++) {
+                System.out.print(dp[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+
     public static int knapsack(int val[], int wt[], int W) {
         int n = val.length;
         int dp[][] = new int[n+1][W+1];
@@ -17,6 +26,7 @@ public class UnboundedKnapsack {
             }
         }
 
+        print(dp);
         return dp[n][W];
     }
     
