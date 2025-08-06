@@ -39,12 +39,11 @@ public class TarjansBridgeAlgorithm {
             } else if(!vis[neigh]) {
                 dfs(graph, neigh, curr, dt, low, vis, time);
                 low[curr] = Math.min(low[curr], low[neigh]);
-                if(dt[curr] < low[neigh]) {
+                if(dt[curr] < low[neigh]) { // Bridge Condition
                     System.out.println("Bridge: " + curr + " ---- " + neigh);
                 }
             } else {
                 low[curr] = Math.min(low[curr], dt[neigh]);
-
             }
         }
     }
